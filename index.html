@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="./Assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css"/>
+    <link rel="stylesheet" href="./Assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./Assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,9 +53,7 @@ body {
     background-color: #5CB85F;
     color: white;
     border-radius: 3px;
-    active {
-        background-color: #5CB85F;
-    }
+    border-color: #5CB85F;
 }
 .px-max {
     padding-left: 7.5%;
@@ -64,6 +66,92 @@ body {
     border: #000;
     border-top: #000;
 }
+.bttn-greenwhite:active{
+    background-color: #5CB85F;
+}
+.bttn-greenwhite:visited{
+    background-color: #5CB85F;
+}
+.bttn-greenwhite:hover{
+    background-color: #5CB85F;
+}
+.bttn-greenwhite:link{
+    background-color: #5CB85F;
+}
+.carousel-wrap {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+  .owl-carousel .owl-nav{
+    overflow: hidden;
+    height: 0px;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, 
+  .owl-theme .owl-dots .owl-dot:hover span {
+      background: #2caae1;
+  }
+
+
+  .owl-carousel .item {
+      text-align: center;
+  }
+  .owl-carousel .nav-btn{
+      height: 47px;
+      position: absolute;
+      width: 26px;
+      cursor: pointer;
+      top: 100px !important;
+  }
+
+  .owl-carousel .owl-prev.disabled,
+  .owl-carousel .owl-next.disabled{
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .owl-carousel .prev-slide{
+      background: url(./Gambar/Testimonial/Left\ button.png) no-repeat scroll 0 0;
+      left: -33px;
+  }
+  .owl-carousel .next-slide{
+      background: url(./Gambar/Testimonial/Right\ button.png) no-repeat scroll -24px 0px;
+      right: -33px;
+  }
+  .owl-carousel .prev-slide:hover{
+     background-position: 0px -53px;
+  }
+  .owl-carousel .next-slide:hover{
+    background-position: -24px -53px;
+  }
+
+  span.img-text {
+    text-decoration: none;
+    outline: none;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    cursor: pointer;
+    width: 100%;
+    font-size: 23px;
+    display: block;
+    text-transform: capitalize;
+  }
+  span.img-text:hover {
+    color: #2caae1;
+  }
+  a:hover, a:link, a:active {
+    color: #000;
+  }
+
+.owl-carousel .owl-nav .owl-prev{
+    background: url('./Gambar/Testimonial/Left\ button.png') no-repeat;
+}
+.owl-carousel .owl-nav .owl-next{
+    background: url('./Gambar/Testimonial/Right\ button.png') no-repeat;
+}
 </style>
 <body>
 
@@ -72,26 +160,26 @@ body {
     <div class="container-fluid sticky-top bg-main">
         <div class="px-max bg-main d-flex align-content-center py-4">
             <div class="w-50">
-                <img src="./Gambar/Hero/logo.png">
+                <img class="img-fluid"src="./Gambar/Hero/logo.png">
             </div>
 
             <!-- Smooth Scroll TBI -->
-            <div class="w-50 d-flex justify-content-end align-content-center text-md-center">
-                <a href="#OurServices" class="mx-2 pt-2">Our Services</a>
-                <a href="#WhyUs" class="mx-2 pt-2">Why Us</a>
-                <a href="#Testi" class="mx-2 pt-2">Testimonial</a>
-                <a href="#FAQ" class="mx-2 pt-2">FAQ</a>
-                <button type="button" class="bttn-greenwhite btn-primary mx-3 d-flex align-items-center align-content-center p-2" style="">Register</button>
+            <div class="w-50 d-flex justify-content-end align-content-center text-md-center text-wrap">
+                <a href="#OurServices" class="mx-2 pt-2 text-reset text-decoration-none">Our Services</a>
+                <a href="#WhyUs" class="mx-2 pt-2 text-reset text-decoration-none">Why Us</a>
+                <a href="#Testi" class="mx-2 pt-2 text-reset text-decoration-none">Testimonial</a>
+                <a href="#FAQ" class="mx-2 pt-2 text-reset text-decoration-none">FAQ</a>
+                <button type="button" class="bttn-greenwhite btn-primary mx-3 d-flex align-items-center align-content-center p-2">Register</button>
             </div>
         </div>
     </div>
 
     <!-- Content Header -->
-    <div class="container-fluid bg-main">
+    <div class="container-fluid bg-main text-wrap">
         <div id="header" class="bg-main d-flex pt-5 align-content-center" style="height: 25em;">
             <!-- Left Side -->
             <div class="w-50 h-100 d-flex flex-column text-md-start" style="padding-left: 7.5%;">
-                <h1>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h1>
+                <h1><b>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</b></h1>
                 <p class="">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
                 <button type="button" class="bttn-greenwhite btn-primary d-flex align-items-center p-2" style="max-width: fit-content;">Mulai Sewa Mobil</button>       
             </div>
@@ -106,13 +194,13 @@ body {
     <div class="container-fluid">
             <div id="OurServices" class="d-flex pt-5">
              <!-- Left Side -->
-                <div class="w-50 d-flex justify-content-center img-fluid" style="padding-left: 7.5%;"> 
-                <img class="img-fluid"src="./Gambar/Our_Services/img_service.png" alt="">
+                <div class="container w-50 d-flex justify-content-center" style="padding-left: 7.5%;"> 
+                <img class="img-fluid"src="./Gambar/Our_Services/img_service.png" style="max-height: 40em;">
                 </div>
         
         <!-- Right Side -->
                 <div class="container-fluid w-50 d-flex flex-column text-sm-start" style="padding-right: 7.5%; --bs-bg-opacity: 0;">
-                    <h2 class="pe-md-5">Best Car Rental for any kind of trip in (Lokasimu)!</h2>
+                    <h2 class="pe-md-5"><b> Best Car Rental for any kind of trip in (Lokasimu)!</b></h2>
                     <p class="pe-md-5">Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.</p>
                         <ul class="list-group list-group-flush pe-md-5 bg-transparent" style="padding-right: 7.5%; --bs-bg-opacity: ,5;">
                         <li class="list-group-item border-0 bg-transparent"><img class="me-2"src="./Gambar/Our_Services/Group 53.png" alt="" >Sewa Mobil Dengan Supir di Bali 12 Jam</li>
@@ -164,19 +252,19 @@ body {
 
     <!-- Testimonial -->
     <div class="">
-        <h2 id="Testi" class="d-flex justify-content-center px-max pt-5">Testimonial</h2>
-        <p class=" d-flex justify-content-center px-max pt-4">Berbagai review positif dari para pelanggan kami</p>
+        <h2 id="Testi" class="d-flex justify-content-center px-max pt-5"><b>Testimonial</b></h2>
+        <p class=" d-flex justify-content-center pt-4 pb-4">Berbagai review positif dari para pelanggan kami</p>
     </div>
+
 
     <!-- Testimonial Card -->
-    <!-- MUNGKIN PAKE AFTER KAYANYA -->
-    <div class="d-flex " style="overflow-x: auto;">
-        <div class="card bg-main me-5 flex-shrink-0" style="width: 50em; min-height: 15em;">
+    <div class="owl-carousel owl-theme">
+        <div class="card bg-main" style="width: 52em; min-height: 15em;">
             <div class="d-flex h-100">
-                <div class="w-25 h-100 d-flex align-items-center">
-                    <img class="ps-5"src="./Gambar/Testimonial/img_photo.png" alt="">
+                <div class="w-25 h-100">
+                    <img class="d-flex justify-content-center pt-5 ps-4 pe-2"src="./Gambar/Testimonial/img_photo.png" style="height: auto; width: 10em;">
                 </div>
-                <div class="w-75 d-flex flex-column justify-content-center">
+                <div class="w-75 d-flex flex-column justify-content-center pt-5">
                     <img class="mb-3" src="./Gambar/Testimonial/Rate.png" style="height: auto; width: 5em;">
                     <p class="d-flex justify-content-center">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
                     <h6>John Dee 32, Bromo</h6>
@@ -184,12 +272,12 @@ body {
             </div>
         </div>
 
-        <div class="card bg-main me-5 flex-shrink-0" style="width: 50em; min-height: 15em;">
+        <div class="card bg-main" style="width: 52em; min-height: 15em;">
             <div class="d-flex h-100">
                 <div class="w-25 h-100 d-flex align-items-center">
-                    <img class="ps-5" src="./Gambar/Testimonial/img_photo.png" alt="">
+                    <img class="d-flex justify-content-center pt-5 ps-4 pe-2"src="./Gambar/Testimonial/img_photo.png" style="height: auto; width: 10em;">
                 </div>
-                <div class="w-75 d-flex flex-column justify-content-center">
+                <div class="w-75 d-flex flex-column justify-content-center pt-5">
                     <img class="mb-3" src="./Gambar/Testimonial/Rate.png" style="height: auto; width: 5em;">
                     <p class="d-flex justify-content-center">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
                     <h6>John Dee 32, Bromo</h6>
@@ -197,39 +285,64 @@ body {
             </div>
         </div>
 
-        <div class="card bg-main me-5 flex-shrink-0" style="width: 50em; min-height: 15em;">
+        <div class="card bg-main" style="width: 52em; min-height: 15em;">
             <div class="d-flex h-100">
                 <div class="w-25 h-100 d-flex align-items-center">
-                    <img class="ps-5" src="./Gambar/Testimonial/img_photo (1).png" alt="">
+                    <img class="d-flex justify-content-center pt-5 ps-4 pe-2" src="./Gambar/Testimonial/img_photo (1).png" style="height: auto; width: 10em;">
                 </div>
-                <div class="w-75 d-flex flex-column justify-content-center">
-                    <img class="mb-3" src="./Gambar/Testimonial/Rate.png" style="height: auto; width: 5em;">
+                <div class="w-75 d-flex flex-column justify-content-center pt-5">
+                    <img class="mb-3 d-flex justify-content-lg-center" src="./Gambar/Testimonial/Rate.png" style="height: auto; width: 5em;">
                     <p class="d-flex justify-content-center">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
                     <h6>John Dee 32, Bromo</h6>
                 </div>
             </div>
         </div>
 
+        <div class="card bg-main" style="width: 52em; min-height: 15em;">
+            <div class="d-flex h-100">
+                <div class="w-25 h-100 d-flex align-items-center">
+                    <img class="d-flex justify-content-center pt-5 ps-4 pe-2" src="./Gambar/Testimonial/img_photo (1).png" style="height: auto; width: 10em;">
+                </div>
+                <div class="w-75 d-flex flex-column justify-content-center pt-5">
+                    <img class="mb-3 d-flex justify-content-lg-center" src="./Gambar/Testimonial/Rate.png" style="height: auto; width: 5em;">
+                    <p class="d-flex justify-content-center">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+                    <h6>John Dee 32, Bromo</h6>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="card bg-main" style="width: 52em; min-height: 15em;">
+            <div class="d-flex h-100">
+                <div class="w-25 h-100 d-flex align-items-center">
+                    <img class="d-flex justify-content-center pt-5 ps-4 pe-2" src="./Gambar/Testimonial/img_photo (1).png" style="height: auto; width: 10em;">
+                </div>
+                <div class="w-75 d-flex flex-column justify-content-center pt-5">
+                    <img class="mb-3 d-flex justify-content-lg-center" src="./Gambar/Testimonial/Rate.png" style="height: auto; width: 5em;">
+                    <p class="d-flex justify-content-center">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+                    <h6>John Dee 32, Bromo</h6>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="d-flex justify-content-center py-5">
+    <button class="Prev border-0" style="background-color: white;"><img src="./Gambar/Testimonial/Left button.png" alt=""></button>
+    <button class="Next border-0" style="background-color: white;"><img src="./Gambar/Testimonial/Right button.png" alt=""></button>
+    </div>
+</section>
 
-    <!-- Testimonial Arrow -->
-        <div class="btn-group" role="group" aria-label="...">
-            <button type="button" class="btn btn-default"></button>
-            <button type="button" class="btn btn-default"></button>
-            <button type="button" class="btn btn-default"></button>
-        </div>
 
     <!-- Sewa Mobil Box Biru -->
     <div class="card text-center px-max" id="cardd">
-        <div class="card-body bg-boxblue rounded-3 px-lg-5 d-flex flex-column align-items-center justify-content-center" style="height: 15em;">
+        <div class="card-body bg-boxblue rounded-3 px-lg-5 d-flex flex-column align-items-center justify-content-center" style="height: 18em;">
           <h5 class="card-title">Sewa Mobil di (Lokasimu) Sekarang</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p class="card-text pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
           <a href="#" class="btn btn-primary bttn-greenwhite">Mulai Sewa Mobil</a>
         </div>
     </div>
 
     <!-- Frequently Asked Question -->
-    <div id="FAQ" class="d-flex px-max pt-5">
+    <div id="FAQ" class="container d-flex px-max pt-5">
         <div class="w-50">
             <h2><b>Frequently Asked Question</b></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -300,14 +413,14 @@ body {
                   </div>
                 </div>
         </div>
-    </div>
+
 
     <!-- Footer -->
-    <footer class="row row-cols-4 px-max mt-lg-5 border-top">
+    <footer class="row row-cols-4 px-max mt-lg-5 border-top-0">
         
         <div class="container-fluid col pt-md-5 text-wrap">
                 <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
-                <p class="text-nowrap">binarcarrental@gmail.com</p>
+                <p class="text-wrap" style="width:1rem">binarcarrental@gmail.com</p>
                 <p>081-233-334-808</p>
             </div>
         
@@ -333,9 +446,41 @@ body {
         
             <!-- pos absolute terus enter -->
             <div class="col pt-md-5">
-              <p class="d-flex justify-content-center">Copyright Binar 2022</p>
-              <img class="nav flex-column pt-2" src="./Gambar/Footer/Rectangle 74.png" alt="">
+              <p class="d-flex">Copyright Binar 2022</p>
+              <img class="nav flex-column pt-2 img-fluid" src="./Gambar/Footer/Rectangle 74.png" alt="">
             </div>
     </footer>
+
+
 </body>
+<!-- Script JS & Lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./Assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    
+<script> 
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({ 
+center: true,
+loop: true,
+margin: 15,  
+nav: false, 
+dots: false, 
+responsive: { 
+  0: { 
+    items: 1,
+    margin: 5,
+  }, 
+  1400: { 
+    items: 2
+  } 
+} 
+}) 
+$('.Next').click(function(){ 
+owl.trigger('next.owl.carousel') 
+}) 
+$('.Prev').click(function(){ 
+owl.trigger('prev.owl.carousel') 
+}) 
+</script> 
+
 </html>
