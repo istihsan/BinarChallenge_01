@@ -106,8 +106,13 @@ body {
     #headerresp {
         max-height: .5%;
     }
+    #navbarresp {
+        max-width: 50%;
+    }
     #showimage {
-        max-height: 20em;
+        max-height: 15em;
+        display: flex;
+        align-items: center;
     }
     #showfooter {
         padding-top: 0px;
@@ -118,6 +123,14 @@ body {
     }
     #psettings {
         padding-bottom: 10%;
+    }
+    #faqresp {
+        display: block !important;
+        min-width: 100% !important;
+        padding-bottom: 5%;
+    }
+    #cardcar {
+        max-width: 100%;
     }
 }
 @media only screen and (min-width: 600px) {
@@ -138,13 +151,14 @@ body {
 
 
     <!-- Header -->
-    <div class="container-fluid sticky-top bg-main" id="headerresp">
-        <div class="px-max bg-main d-flex align-content-center py-4">
+
+    </div>
+         <div class="px-max bg-main d-flex align-content-center py-4">
             <div class="w-50 align-items-center d-flex">
                 <img class="img-fluid"src="./Gambar/Hero/logo.png">
             </div>
 
-            <div class="w-50 d-flex justify-content-end align-content-center text-md-center text-wrap">
+            <div class="w-50 d-flex justify-content-end align-content-center text-md-center" id="navbarresp">
                 <a href="#OurServices" class="mx-2 pt-2 text-reset text-decoration-none">Our Services</a>
                 <a href="#WhyUs" class="mx-2 pt-2 text-reset text-decoration-none">Why Us</a>
                 <a href="#Testi" class="mx-2 pt-2 text-reset text-decoration-none">Testimonial</a>
@@ -271,20 +285,20 @@ body {
 
     <!-- Testimonial Card -->
     <div class="owl-carousel owl-theme">
-        <div class="card bg-main" style="width: 52em; min-height: 15em;">
+        <div id="cardcar" class="card bg-main" style="width: 52em; min-height: 15em;">
             <div class="d-flex h-100">
-                <div class="w-25 h-100">
+                <div class="w-25 h-100 d-flex align-items-center">
                     <img class="d-flex justify-content-center pt-5 ps-4 pe-2"src="./Gambar/Testimonial/img_photo.png" style="height: auto; width: 10em;">
                 </div>
                 <div class="w-75 d-flex flex-column justify-content-center pt-5">
                     <img class="mb-3" src="./Gambar/Testimonial/Rate.png" style="height: auto; width: 5em;">
-                    <p class="d-flex justify-content-center">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+                    <p class="d-flex justify-content-center text-wrap">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
                     <h6>John Dee 32, Bromo</h6>
                 </div>
             </div>
         </div>
 
-        <div class="card bg-main" style="width: 52em; min-height: 15em;">
+        <div id="cardcar" class="card bg-main" style="width: 52em; min-height: 15em;">
             <div class="d-flex h-100">
                 <div class="w-25 h-100 d-flex align-items-center">
                     <img class="d-flex justify-content-center pt-5 ps-4 pe-2"src="./Gambar/Testimonial/img_photo.png" style="height: auto; width: 10em;">
@@ -297,7 +311,7 @@ body {
             </div>
         </div>
 
-        <div class="card bg-main" style="width: 52em; min-height: 15em;">
+        <div id="cardcar" class="card bg-main" style="width: 52em; min-height: 15em;">
             <div class="d-flex h-100">
                 <div class="w-25 h-100 d-flex align-items-center">
                     <img class="d-flex justify-content-center pt-5 ps-4 pe-2" src="./Gambar/Testimonial/img_photo (1).png" style="height: auto; width: 10em;">
@@ -310,7 +324,7 @@ body {
             </div>
         </div>
 
-        <div class="card bg-main" style="width: 52em; min-height: 15em;">
+        <div id="cardcar" class="card bg-main" style="width: 52em; min-height: 15em;">
             <div class="d-flex h-100">
                 <div class="w-25 h-100 d-flex align-items-center">
                     <img class="d-flex justify-content-center pt-5 ps-4 pe-2" src="./Gambar/Testimonial/img_photo (1).png" style="height: auto; width: 10em;">
@@ -324,7 +338,7 @@ body {
         </div>
     
 
-        <div class="card bg-main" style="width: 52em; min-height: 15em;">
+        <div id="cardcar" class="card bg-main" style="width: 52em; min-height: 15em;">
             <div class="d-flex h-100">
                 <div class="w-25 h-100 d-flex align-items-center">
                     <img class="d-flex justify-content-center pt-5 ps-4 pe-2" src="./Gambar/Testimonial/img_photo (1).png" style="height: auto; width: 10em;">
@@ -354,13 +368,13 @@ body {
     </div>
 
     <!-- Frequently Asked Question -->
-    <div id="FAQ" class="container d-flex px-max pt-5">
-        <div class="w-50">
+    <div id="faqresp" class="container d-flex px-max pt-5">
+        <div class="w-50 d-inline-block" id="faqresp">
             <h2><b>Frequently Asked Question</b></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </div>
         <!-- Accordion -->
-        <div class="w-50">
+        <div id="faqresp"class="w-50">
             <div class="accordion mb-3" id="accordionExample">
                 <div class="accordion-item border">
                   <h2 class="accordion-header" id="headingOne">
