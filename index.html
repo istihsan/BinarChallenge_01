@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="./Assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css"/>
     <link rel="stylesheet" href="./Assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./Assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8">
@@ -78,54 +79,6 @@ body {
 .bttn-greenwhite:link{
     background-color: #5CB85F;
 }
-.carousel-wrap {
-    width: 1000px;
-    margin: auto;
-    position: relative;
-  }
-  .owl-carousel .owl-nav{
-    overflow: hidden;
-    height: 0px;
-  }
-
-  .owl-theme .owl-dots .owl-dot.active span, 
-  .owl-theme .owl-dots .owl-dot:hover span {
-      background: #2caae1;
-  }
-
-
-  .owl-carousel .item {
-      text-align: center;
-  }
-  .owl-carousel .nav-btn{
-      height: 47px;
-      position: absolute;
-      width: 26px;
-      cursor: pointer;
-      top: 100px !important;
-  }
-
-  .owl-carousel .owl-prev.disabled,
-  .owl-carousel .owl-next.disabled{
-    pointer-events: none;
-    opacity: 0.2;
-  }
-
-  .owl-carousel .prev-slide{
-      background: url(./Gambar/Testimonial/Left\ button.png) no-repeat scroll 0 0;
-      left: -33px;
-  }
-  .owl-carousel .next-slide{
-      background: url(./Gambar/Testimonial/Right\ button.png) no-repeat scroll -24px 0px;
-      right: -33px;
-  }
-  .owl-carousel .prev-slide:hover{
-     background-position: 0px -53px;
-  }
-  .owl-carousel .next-slide:hover{
-    background-position: -24px -53px;
-  }
-
   span.img-text {
     text-decoration: none;
     outline: none;
@@ -145,33 +98,35 @@ body {
   a:hover, a:link, a:active {
     color: #000;
   }
+  /* Responsiveness */
   @media only screen and (max-width: 600px) {
     #fadeshow1 {
         display: none;
     }
-}
-@media only screen and (max-width: 600px) {
+    #headerresp {
+        max-height: .5%;
+    }
     #showimage {
         max-height: 20em;
     }
-}
-@media only screen and (max-width: 600px) {
     #showfooter {
         padding-top: 0px;
+        display: inline !important;
     }
-}
-@media only screen and (max-width: 600px) {
     #hidecard {
         display: none;
+    }
+    #psettings {
+        padding-bottom: 10%;
     }
 }
 @media only screen and (min-width: 600px) {
     #hidecard1 {
         display: none;
         max-width: 300px;
-
     }
 }
+
 .owl-carousel .owl-nav .owl-prev{
     background: url('./Gambar/Testimonial/Left\ button.png') no-repeat;
 }
@@ -183,13 +138,12 @@ body {
 
 
     <!-- Header -->
-    <div class="container-fluid sticky-top bg-main">
+    <div class="container-fluid sticky-top bg-main" id="headerresp">
         <div class="px-max bg-main d-flex align-content-center py-4">
-            <div class="w-50">
+            <div class="w-50 align-items-center d-flex">
                 <img class="img-fluid"src="./Gambar/Hero/logo.png">
             </div>
 
-            <!-- Smooth Scroll TBI -->
             <div class="w-50 d-flex justify-content-end align-content-center text-md-center text-wrap">
                 <a href="#OurServices" class="mx-2 pt-2 text-reset text-decoration-none">Our Services</a>
                 <a href="#WhyUs" class="mx-2 pt-2 text-reset text-decoration-none">Why Us</a>
@@ -201,11 +155,11 @@ body {
     </div>
 
     <!-- Content Header -->
-    <div class="container-fluid bg-main text-wrap">
+    <div class="container-fluid bg-main text-wrap" >
         <div id="header" class="bg-main d-flex pt-5 align-content-center" style="height: 25em;">
             <!-- Left Side -->
             <div class="w-50 h-100 d-flex flex-column text-md-start" style="padding-left: 7.5%;">
-                <h1><b>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</b></h1>
+                <h1 id="psettings"><b>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</b></h1>
                 <p class="" id="fadeshow1">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
                 <button type="button" class="bttn-greenwhite btn-primary d-flex align-items-center p-2" style="max-width: fit-content;">Mulai Sewa Mobil</button>       
             </div>
@@ -221,7 +175,7 @@ body {
             <div id="OurServices" class="d-flex pt-5">
              <!-- Left Side -->
                 <div class="container w-50 d-flex justify-content-center" style="padding-left: 7.5%;"> 
-                <img id="showimage" class="img-fluid"src="./Gambar/Our_Services/img_service.png" style="">
+                <img id="showimage" class="img-fluid"src="./Gambar/Our_Services/img_service.png">
                 </div>
         
         <!-- Right Side -->
